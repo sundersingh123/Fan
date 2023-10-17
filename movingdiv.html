@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+        .ab{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            position: relative;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: backwards;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+        @keyframes move{
+            0%{background-color: red; top:0px; left:0px; border-radius: 20%;}
+            25%{background-color: rgb(51, 219, 177);top:0px; left:500px;}
+            50%{background-color: rgb(106, 13, 172);top:500px; left:500px; border-radius: 40%;}
+            75%{background-color: rgba(225, 255, 0, 0.948);top:500px; left:0px;}
+            100%{background-color: rgb(10, 9, 9);top:0px; left:0px;}
+        }
+        .spin{
+            height: 400px;
+            background-color:transparent;
+            background-image: repeating-conic-gradient(white 30%,black 30%, yellow 40% );
+            margin-top: 100px;
+            width: 400px;
+           border-radius: 50%;
+            animation-name: spin;
+            animation-duration: 5s;
+            position: absolute;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes spin{
+            0%{ background-color: red; rotate: 0deg;}
+            /* 25%{rotate: 90deg;}
+            50%{rotate: 180deg;}
+            75%{rotate: 270deg;} */
+            100%{rotate: 360deg;}
+        }
+        .line{
+            height: 400px;
+            width: 20px;
+            background-color: grey;
+            margin-top: 500px;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="ab"></div> -->
+    <div class="spin"></div>
+    <div class="line"></div>
+    
+</body>
+</html>
